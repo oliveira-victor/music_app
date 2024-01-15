@@ -1,7 +1,15 @@
+import Login from "./pages/Login"
+import GlobalStyle, { Wrapper } from "./styles"
+
 function App() {
 
   return (
-    <h1>Hello world</h1>
+    <>
+      <GlobalStyle />
+      <Wrapper>
+        <Login />
+      </Wrapper>
+    </>
   )
 }
 
