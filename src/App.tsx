@@ -1,15 +1,16 @@
-import Login from "./pages/Login"
+import { BrowserRouter } from "react-router-dom"
+import Browse from "./browse"
 import GlobalStyle, { Wrapper } from "./styles"
 
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyle />
       <Wrapper>
-        <Login />
+        <Browse />
       </Wrapper>
-    </>
+    </BrowserRouter>
   )
 }
 
