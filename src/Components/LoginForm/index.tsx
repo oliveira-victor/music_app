@@ -5,6 +5,7 @@ import * as S from './styles'
 
 import eye from '../../assets/images/eye.svg'
 import eyeOff from '../../assets/images/eyeOff.svg'
+import { Link } from "react-router-dom"
 
 type Props = {
     linkAction: React.MouseEventHandler<HTMLButtonElement>
@@ -28,7 +29,7 @@ const LoginForm = ({ linkAction }: Props) => {
                 <Input type={type} name="password" id='password' required />
                 <img onClick={toggleType} src={type === 'text' ? eye : eyeOff} alt="Show or hide password icon" title='Show or hide password' />
             </div>
-            <S.LoginBtn>Log in</S.LoginBtn>
+            <Link to='/home' style={{textDecoration: 'none'}}><S.LoginBtn>Log in</S.LoginBtn></Link>
             <p>New user? <LinkStyle onClick={linkAction}>Create a new account</LinkStyle></p>
         </S.LoginForm>
     )
