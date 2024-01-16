@@ -12,6 +12,7 @@ export const LoginForm = styled.form`
 
     p {
         margin-top: 20px;
+        text-align: center;
     }
 
     img {
@@ -31,7 +32,7 @@ export const LoginForm = styled.form`
 export const LoginBtn = styled(Button)`
     width: 80%;
     display: block;
-    margin-top: 40px;
+    margin: 40px auto;
 
     @media (max-width: 767px) {
         width: 100%;
