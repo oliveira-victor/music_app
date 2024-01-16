@@ -8,9 +8,11 @@ export const Header = styled.header`
     padding: 0 40px;
     display: flex;
     align-items: center;
+    position: fixed;
 
-    @media (min-width: 768px) {
-        position: fixed;
+    @media (max-width: 767px) {
+        position: relative;
+        justify-content: center;
     }
 
     span {

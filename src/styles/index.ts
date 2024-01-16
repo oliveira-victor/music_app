@@ -9,6 +9,12 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Exo', sans-serif;
     }
 
+    h2 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: #fff;
+    }
+
     .container {
         max-width: 1440px;
         margin: 0 auto;
@@ -47,6 +53,30 @@ export const Button = styled.button`
     &:hover {
         background-color: ${colors.highlightHover};
     }
+`
+
+export const Label = styled.label`
+    font-size: 20px;
+    display: block;
+    margin-top: 20px;
+`
+
+export const Input = styled.input`
+    margin-top: 10px;
+    color: ${colors.highlight};
+    width: 80%;
+    height: 52px;
+    border: none;
+    padding: 8px;
+    font-size: 20px;
+    background-color: transparent;
+    border-bottom: 2px solid ${colors.lightBg};
+    outline-color: none;
+
+    &:focus {
+            outline: none;
+            border-color: ${colors.highlight};
+        }
 `
 
 export default GlobalStyle

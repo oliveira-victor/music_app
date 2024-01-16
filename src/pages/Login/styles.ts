@@ -1,6 +1,9 @@
-import styled from "styled-components";
-import { colors } from "../../styles/colors";
-import { Button } from "../../styles";
+import styled, { keyframes } from "styled-components";
+
+const FadeIn = keyframes`
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+`
 
 export const LoginContainer = styled.div`
     min-height: 100vh;
@@ -21,6 +24,9 @@ export const Container = styled.div`
     gap: 10px;
     padding: 0 8px;
     padding-bottom: 20px;
+    animation-name: ${FadeIn};
+    animation-duration: 1s;
+    transition: all .2s ease;
 
     @media (max-width: 767px) {
             display: flex;
@@ -48,62 +54,4 @@ export const FormContainer = styled.div`
     display: flex;
     align-items: center;
 
-`
-
-export const LoginForm = styled.form`
-    width: 100%;
-    color: ${colors.lightBg};
-
-    @media (max-width: 767px) {
-        text-align: center;
-    }
-
-    h2 {
-        margin-bottom: 20px;
-        font-size: 28px;
-    }
-
-    label {
-        font-size: 20px;
-        display: block;
-        margin-top: 20px;
-    }
-
-    input {
-        margin-top: 10px;
-        color: ${colors.highlight};
-        width: 80%;
-        height: 52px;
-        border: none;
-        padding: 8px;
-        font-size: 20px;
-        background-color: transparent;
-        border-bottom: 2px solid ${colors.lightBg};
-        outline-color: none;
-
-        &:focus {
-            outline: none;
-            border-color: ${colors.highlight};
-        }
-    }
-
-    p {
-        margin-top: 20px;
-    }
-
-    img {
-        cursor: pointer;
-        width: 24px;
-    }
-`
-
-export const LoginBtn = styled(Button)`
-    width: 80%;
-    display: block;
-    margin-top: 40px;
-
-    @media (max-width: 767px) {
-        width: 100%;
-        margin-bottom: 40px;
-    }
 `
