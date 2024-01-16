@@ -3,12 +3,19 @@ import Header from "../../Components/Header"
 
 import * as S from './styles'
 
+type Artist = {
+    id: number
+    name: string
+    genre: string
+    country: string
+}
+
 const Home = () => {
 
     // TEST INIT
 
-    const [artists, setArtists] = useState([]);
-    const [selectedArtist, setSelectedArtist] = useState(null);
+    const [artists, setArtists] = useState<Artist[]>([]);
+    const [selectedArtist, setSelectedArtist] = useState<Artist | null>(null);
 
     useEffect(() => {
         // Fetch the list of artists
@@ -18,7 +25,7 @@ const Home = () => {
             .catch(error => console.error('Error fetching artists:', error));
     }, []);
 
-    const handleArtistClick = (artistId) => {
+    const handleArtistClick = (artistId: number) => {
         // Fetch data for the selected artist
         fetch(`https://europe-west1-madesimplegroup-151616.cloudfunctions.net/artists-api-controller?artist_id=${artistId}`)
             .then(response => response.json())
