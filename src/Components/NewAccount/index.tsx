@@ -49,8 +49,10 @@ const NewAccount = ({ linkAction }: Props) => {
                 <Label htmlFor="username">Username</Label>
                 <Input type="text" name="username" id='username' required />
                 <Label htmlFor="password">Password</Label>
-                <Input name="password" id='password' type={type} onChange={event => setPassword(event.target.value)} required />
-                <img onClick={toggleType} src={type === 'text' ? eye : eyeOff} alt="Show or hide password icon" title='Show or hide password' />
+                <S.InputEye>
+                    <Input name="password" id='password' type={type} onChange={event => setPassword(event.target.value)} required />
+                    <img onClick={toggleType} src={type === 'text' ? eye : eyeOff} alt="Show or hide password icon" title='Show or hide password' />
+                </S.InputEye>
                 <Label htmlFor="confirm">Confirm password</Label>
                 <Input name="confirm" id="confirm" type={type} onChange={event => setConfirmPassword(event.target.value)} required />
                 {matchingPassword()}
@@ -59,7 +61,7 @@ const NewAccount = ({ linkAction }: Props) => {
                     <div>
                         <input type="radio" id="user" name="accounttype" value='User' required />
                         <label htmlFor="user">Register as a user</label>
-                        
+
                     </div>
                     <div>
                         <input type="radio" id="admin" name="accounttype" value='admin' />

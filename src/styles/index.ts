@@ -64,7 +64,7 @@ export const Label = styled.label`
 export const Input = styled.input`
     margin-top: 10px;
     color: ${colors.highlight};
-    width: 80%;
+    width: 100%;
     height: 52px;
     border: none;
     padding: 8px;

@@ -17,6 +17,14 @@ export const LoginForm = styled.form`
     img {
         cursor: pointer;
         width: 24px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-10px, 26px);
+    }
+
+    div {
+        position: relative;
     }
 `
 

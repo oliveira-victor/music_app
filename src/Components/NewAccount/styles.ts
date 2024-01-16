@@ -14,14 +14,22 @@ export const NewAccountContainer = styled.div`
     transition: all .2s ease;
     width: 50%;
 
-    img {
-        cursor: pointer;
-        width: 24px;
-    }
-
     @media (max-width: 767px) {
         width: 90%;
         margin-top: 40px;
+    }
+`
+
+export const InputEye = styled.div`
+    position: relative;
+
+    img {
+        cursor: pointer;
+        width: 24px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-10px, 26px);
     }
 `
 

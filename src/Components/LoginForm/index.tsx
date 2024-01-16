@@ -24,8 +24,10 @@ const LoginForm = ({ linkAction }: Props) => {
             <Label htmlFor="user">User name</Label>
             <Input type="text" name="user" id="user" required />
             <Label htmlFor="password">Password</Label>
-            <Input type={type} name="password" id='password' required />
-            <img onClick={toggleType} src={type === 'text' ? eye : eyeOff} alt="Show or hide password icon" title='Show or hide password' />
+            <div>
+                <Input type={type} name="password" id='password' required />
+                <img onClick={toggleType} src={type === 'text' ? eye : eyeOff} alt="Show or hide password icon" title='Show or hide password' />
+            </div>
             <S.LoginBtn>Log in</S.LoginBtn>
             <p>New user? <LinkStyle onClick={linkAction}>Create a new account</LinkStyle></p>
         </S.LoginForm>
