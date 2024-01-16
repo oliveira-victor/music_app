@@ -18,7 +18,7 @@ const Home = () => {
             .catch(error => console.error('Error fetching artists:', error));
     }, []);
 
-    const handleArtistClick = (artistId: any) => {
+    const handleArtistClick = (artistId) => {
         // Fetch data for the selected artist
         fetch(`https://europe-west1-madesimplegroup-151616.cloudfunctions.net/artists-api-controller?artist_id=${artistId}`)
             .then(response => response.json())
