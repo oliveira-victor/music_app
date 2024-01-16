@@ -20,6 +20,8 @@ export const Wrapper = styled.div`
     max-width: 1920px;
     margin: 0 auto;
     background-color: ${colors.darker};
+    background: rgb(10,10,10);
+    background: linear-gradient(144deg, rgba(10,10,10,1) 23%, rgba(105,46,122,1) 100%);
     min-height: 100vh;
 `
 
