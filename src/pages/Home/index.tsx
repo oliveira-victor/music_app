@@ -5,7 +5,8 @@ import * as S from './styles'
 
 const Home: React.FC = () => {
 
-    const { data: artists, error, isLoading } = useGetArtistsQuery();
+    const { data: artists, isLoading } = useGetArtistsQuery();
+    /* const { data: artists, error, isLoading } = useGetArtistsQuery(); */
 
     if (isLoading) {
         return <div>Loading...</div>;
